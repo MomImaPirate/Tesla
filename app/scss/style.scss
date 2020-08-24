@@ -1,0 +1,333 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+//-------header-------//
+.header {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: 36px;
+    margin-bottom: 29px;
+}
+
+
+.header-btn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    margin-top: 31px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div {
+        height: 2px;
+        width: 36px;
+        background-color: #fff;
+        margin: 5px 0;
+    }
+}
+
+.header-content__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 96px;
+    line-height: 112px;
+    margin-bottom: 40px;
+}
+
+.header-content__text {
+    width: 284px;
+    margin-bottom: 25px;
+}
+
+.testdrive-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #FFFFFF;
+    display: inline-block;
+    padding: 30px 62px;
+    transition: all .5s;
+    &:hover {
+        background: #770302;
+    }
+}
+
+.menu {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    transition: all .5s;
+    z-index: 7;
+}
+
+.active {
+    left: 0;
+}
+
+.close-btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 31px;
+    cursor: pointer;
+    &::after,
+    &::before {
+        content: "";
+        width: 70px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        transform-origin: left;
+    }
+    &::after {
+        transform: rotate(45deg);
+    }
+    &::before {
+        transform: rotate(-45deg);
+        bottom: -1px;
+    }
+}
+//-------/header-------//
+
+//-------menu-------//
+.container-menu {
+    position: relative;
+}
+
+.menu-list {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    a {
+        display: inline-block;
+        padding: 30px 25px 14px 0;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 56px;
+        border-bottom: 3px solid #B70021;
+        min-width: 368px;
+        transition: all .5s;
+        &:hover {
+            border-color: #fff;
+            color: #B70021;
+            transform: scale(1.2);
+            margin-left: 37px;
+        }
+    }
+}
+//-------/menu-------//
+
+
+
+//-------slider-top-------//
+.slider__item {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh;
+}
+
+.slider .slick-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0b0b0b;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider .slick-dots .slick-active button {
+    background-color: #fff;
+}
+
+.slider .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slider .slick-dots {
+    margin: -55px auto 0;
+    position: relative;
+    z-index: 6;
+    max-width: 1230px;
+    padding: 0 15px;
+}
+//-------/lider-top-------//
+
+
+//-------statistics-------//
+.statistics {
+    margin: 160px 0 100px;
+}
+
+.statistics-items {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.statistics-item__title {
+    margin-bottom: 19px;
+
+}
+
+.statistics-item__num {
+    font-size: 96px;
+    line-height: 112px;
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+    span {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+}
+
+.statistics-item__num--speed {
+    span {
+        position: relative;
+        display: inline-block;
+        &::before {
+            content: "+";
+            position: absolute;
+            top: -60px;
+        }
+    }
+}
+
+.statistics-item__descr {
+    color: #B70021;
+}
+//-------/statistics-------//
+
+//-------/car-video-------//
+.car-video {
+    margin-bottom: 100px;
+}
+//-------/car-video-------//
+
+//-------adventages-------//
+.advantages-inner__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.advantages__title {
+    font-size: 36px;
+    line-height: 42px;
+    color: #B70021;
+    position: absolute;
+    top: 0;
+}
+
+.advantages__title--bottom {
+    right: 0;
+    bottom: 0;
+    top: auto;
+}
+
+.advantages__text {
+    font-size: 24px;
+    line-height: 28px;
+    width: 303px;
+    .advantages-list__item {
+        transition: all .2s;
+        cursor: pointer;
+        &:hover {
+            color: #B70021;
+        }
+    }
+}
+
+.advantages-descr {
+    max-width: 570px;
+    width: 100%;
+}
+//-------/adventages-------//
+
+//-------designe-------//
+.designe__images {
+    margin-bottom: 100px;
+}
+.design-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.designe-row__item {
+    max-width: 570px;
+    width: 100%;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.designe-row__item-number {
+    color: #B70021;
+}
+.designe-row__item-text {
+    max-width: 430px;
+    padding-top: 25px;
+}
+//-------/designe-------//
+
+//-------footer-------//
+.footer {
+    background-color: #690102;
+    padding: 83px 0 20px;
+}
+
+.footer-btn {
+    text-align: center;
+    margin-bottom: 83px;
+}
+
+.footer-copy {
+    font-weight: 700;
+    text-align: center;
+    li {
+        display: inline-block;
+        padding: 0 10px;
+        position: relative;
+        a {
+            transition: all .2s;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+    li +li ::before {
+        content: "|";
+        position: absolute;
+        left: -5px;
+    }
+}
+
+.testdrive-btn--black:hover {
+    background-color: #0b0b0b;
+}
+//-------/footer-------//
+
+@import "media";
